@@ -1,0 +1,11 @@
+<ng-container *ngIf="car === null; else elseBlock">
+  <div>
+    <p><strong>Car not available</strong></p>
+  </div>
+</ng-container>
+<ng-template #elseBlock>
+  <div>
+    <h1>{{car?.make}} {{car?.model}}</h1>
+    <p>{{car?.description}}</p>
+  </div>
+</ng-template>
